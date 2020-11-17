@@ -41,6 +41,6 @@ jobs:
           echo "::set-output name=branch::$(echo play)"
         
       - name: print output
-        runs: |
+        run: |
           echo ${{ steps.get_branch_outputs.branch }}
 
