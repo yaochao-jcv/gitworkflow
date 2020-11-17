@@ -42,5 +42,7 @@ jobs:
         
       - name: print output
         run: |
-          echo ${{ steps.get_branch_outputs.branch }}
+          echo $BRANCH
+        env:
+          BRANCH: ${{ steps.get_branch_outputs.branch }}
 
