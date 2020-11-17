@@ -34,3 +34,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: prepare output
+        id: get_branch
+        run: |
+          echo "::set-output name=branch::$(echo play)"
+        
+      - name: print output
+        runs: |
+          echo ${{ steps.get_branch_outputs.branch }}
+
