@@ -44,5 +44,5 @@ jobs:
         run: |
           echo $BRANCH
         env:
-          BRANCH: ${{ steps.get_branch_outputs.branch }}
+          BRANCH: ${{ steps.get_branch.outputs.branch }}
 
